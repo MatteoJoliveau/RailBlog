@@ -1,1 +1,6 @@
-<%= "inside of app: #{ENV['RAILS_DB_USER'].inspect}" %>
+<h1>RailBlog</h1>
+
+<% @posts.each do |post| %>
+  <h3><%= link_to post.title, post %></h3>
+  <p><%= post.created_at.strftime("%B %d, %Y") %></p>
+<% end %>
