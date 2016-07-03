@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a>
+        <li><%= link_to 'New', new_post_path(@post) %> </li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
