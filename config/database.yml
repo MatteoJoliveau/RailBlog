@@ -11,16 +11,16 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: <%= ENV['RAILS_DB_NAME'] %>
+  database: ENV['RAILS_DB_NAME']
   pool: 5
   username: rails
-  password: <%= ENV['RAILS_DB_PASSWORD'] %>
+  password: ENV['RAILS_DB_PASSWORD']
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: <%= ENV['RAILS_DB_NAME'] %>
+  database: ENV['RAILS_DB_NAME']
   pool: 5
   username: rails
-  password: <%= ENV['RAILS_DB_PASSWORD'] %>
+  password: ENV['RAILS_DB_PASSWORD']
