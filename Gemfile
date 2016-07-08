@@ -27,7 +27,11 @@ gem 'jbuilder', '~> 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#Use dotenv to keep environment variables
 gem 'dotenv-rails', :groups => [:development, :test]
+
+#Use Devise for user authentication
+gem 'devise', '~> 4.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

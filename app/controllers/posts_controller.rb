@@ -1,15 +1,15 @@
 class PostsController < ApplicationController
-
+  before_action :authenticate_admin!, except: [:index, :show]
   def index
     @posts = Post.all.order('created_at DESC')
   end
 
   def new
-    @post = Post.new
+    @post = current_admin.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_admin.posts.build(post_params)
     if @post.save
       redirect_to @post
     else

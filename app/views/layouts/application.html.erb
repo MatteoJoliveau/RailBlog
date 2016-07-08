@@ -15,6 +15,13 @@
         <li><%= link_to 'New', new_post_path(@post) %> </li>
       </ul>
     </nav>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
+    <script id="dsq-count-scr" src="//matteojoliveau.disqus.com/count.js" async></script>
+
+    <div class="footer">
+      <p>Built with <a href="https://github.com/MatteoJoliveau/RailBlog" target="_blank">RailBlog</a> ©2016 Matteo Joliveau </p>
+    </div>
   </body>
 </html>
