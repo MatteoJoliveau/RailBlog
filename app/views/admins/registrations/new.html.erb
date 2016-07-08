@@ -11,8 +11,8 @@
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email %>
-  </div
-
+  </div>
+  
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
@@ -31,4 +31,4 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "admins/shared/links" %>

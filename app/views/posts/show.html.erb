@@ -3,8 +3,10 @@
 <p><%= @post.body %></p>
 
 <a href="/">Back</a>
-| <%= link_to 'Edit', edit_post_path(@post) %> |
- <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if admin_signed_in? %>
+  |<%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 
  <div id="disqus_thread"></div>
  <script>

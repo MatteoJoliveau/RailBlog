@@ -13,6 +13,9 @@
       <ul>
         <li><a href="/">Home</a>
         <li><%= link_to 'New', new_post_path(@post) %> </li>
+        <% if admin_signed_in? %>
+          <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete %></li>
+        <% end %>
       </ul>
     </nav>
     <p class="notice"><%= notice %></p>
